@@ -1,0 +1,7 @@
+model,MAE,RMSE,R2
+Naive persistence (1-day),12.24,23.81,0.979
+Naive persistence (3-day),18.97,37.39,0.949
+Linear Regression (1-day),17.35,26.82,0.974
+Linear Regression (3-day),23.01,34.71,0.956
+LSTM (1-day),11.78,20.97,0.984
+LSTM (3-day),15.54,24.6,0.978

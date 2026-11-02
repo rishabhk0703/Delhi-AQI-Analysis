@@ -1,0 +1,55 @@
+:root {
+  --bg-base: #0b0f14;
+  --bg-panel: #121821;
+  --bg-panel-raised: #1a222d;
+  --border: #263141;
+  --border-soft: #1c2530;
+  --text-primary: #e7edf3;
+  --text-muted: #8695a7;
+  --text-faint: #576374;
+  --accent: #4fd1c5;
+  --accent-dim: #2a6e68;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(79, 209, 197, 0.06), transparent),
+    radial-gradient(ellipse 700px 400px at 100% 0%, rgba(239, 68, 68, 0.04), transparent);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: white;
+}
+
+/* focus visibility for accessibility */
+button:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
